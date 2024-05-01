@@ -1,3 +1,4 @@
+require "__HermiosLibs__.data-libs"
 require "constants"
 require "prototypes.entities"
 require "prototypes.items"
