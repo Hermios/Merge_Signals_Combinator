@@ -22,7 +22,7 @@ function msc_prototype:update_output()
     end
     for i,signal_data in pairs(red_data.signals or {}) do
         signal_data.count=green_data.get_signal(signal_data.signal)*signal_data.count
-        if signal_data.count>0 then
+        if signal_data.count~=0 then
             self.sender.get_or_create_control_behavior().set_signal(i,signal_data)
         end
     end

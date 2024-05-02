@@ -1,6 +1,7 @@
 createdata("arithmetic-combinator","arithmetic-combinator",prototype,{
     activity_led_sprites=data.raw["arithmetic-combinator"]["arithmetic-combinator"].activity_led_sprites
 })
+
 data.raw["arithmetic-combinator"][prototype].multiply_symbol_sprites = {
   north = util.draw_as_glow
     {
@@ -74,4 +75,5 @@ data.raw["arithmetic-combinator"][prototype].multiply_symbol_sprites = {
 
 createdata("constant-combinator","constant-combinator",ghost_merge_signals_provider,{
     circuit_wire_connection_points=data.raw["constant-combinator"]["constant-combinator"].circuit_wire_connection_points
-},true)
+    ,draw_circuit_wires=false
+  },true)
