@@ -20,10 +20,15 @@ function msc_prototype:update_output()
     if not red_data or not green_data then
         return
     end
-    for i,signal_data in pairs(red_data.signals or {}) do
+    local i=1
+    for _,signal_data in pairs(red_data.signals or {}) do
         signal_data.count=green_data.get_signal(signal_data.signal)*signal_data.count
         if signal_data.count~=0 then
             self.sender.get_or_create_control_behavior().set_signal(i,signal_data)
+            i=i+1
+            if i>=20 then
+                return
+            end
         end
     end
 end
