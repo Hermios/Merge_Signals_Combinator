@@ -73,7 +73,8 @@ data.raw["arithmetic-combinator"][prototype].multiply_symbol_sprites = {
     }
 }
 
-createdata("constant-combinator","constant-combinator",ghost_merge_signals_provider,{
-    circuit_wire_connection_points=data.raw["constant-combinator"]["constant-combinator"].circuit_wire_connection_points
-    ,draw_circuit_wires=false
+createdata("arithmetic-combinator","arithmetic-combinator",ghost_merge_signals_provider,{
+    draw_circuit_wires=false
   },true)
+table.insert(data.raw["arithmetic-combinator"][ghost_merge_signals_provider].flags,"placeable-off-grid")
+data.raw["arithmetic-combinator"][ghost_merge_signals_provider].collision_mask={"not-colliding-with-itself"}

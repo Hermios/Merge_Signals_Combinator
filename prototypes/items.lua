@@ -1,2 +1,2 @@
 createdata("item","arithmetic-combinator",prototype)
-createdata("item","constant-combinator",ghost_merge_signals_provider,nil,true)
+createdata("item","arithmetic-combinator",ghost_merge_signals_provider,nil,true)
